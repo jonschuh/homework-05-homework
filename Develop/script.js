@@ -22,14 +22,14 @@ $(document).ready(function () {
 
  
       $(".time-block").each(function () {
-          var blockHour = parseInt($(this).attr("id").split("hour")[1]);
-          console.log( blockHour, currentHour)
-          if (blockHour < currentHour) {
+          var timeBlock = parseInt($(this).attr("id").split("hour")[1]);
+          console.log( timeBlock, currentHour)
+          if (timeBlock < currentHour) {
               $(this).addClass("past");
               $(this).removeClass("future");
               $(this).removeClass("present");
           }
-          else if (blockHour === currentHour) {
+          else if (timeBlock === currentHour) {
               $(this).removeClass("past");
               $(this).addClass("present");
               $(this).removeClass("future");
